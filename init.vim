@@ -70,8 +70,8 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap <leader>nt :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable = '►'
-let g:NERDTreeDirArrowCollapsible = '▼'
+let g:NERDTreeDirArrowExpandable = '[+]'
+let g:NERDTreeDirArrowCollapsible = '[-]'
 let NERDTreeShowHidden=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -260,3 +260,5 @@ nnoremap <leader>tb :TagbarToggle<CR>
 noremap <leader>bn :bNext<CR>
 noremap <leader>bp :bprevious<CR>
 noremap <leader>bd :bdelete<CR>
+
+let g:loaded_perl_provider = 0
