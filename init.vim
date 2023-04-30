@@ -38,6 +38,8 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/preservim/tagbar'
 Plug 'motemen/git-vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'unkiwii/vim-nerdtree-sync'
 
 call plug#end()
 
@@ -66,6 +68,19 @@ nnoremap <leader>nt :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '[+]'
 let g:NERDTreeDirArrowCollapsible = '[-]'
 let NERDTreeShowHidden=1
+
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'✹',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
