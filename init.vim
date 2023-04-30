@@ -261,3 +261,8 @@ let g:loaded_perl_provider = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap <leader>tb :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <Leader>gs :GitStatus<CR>
+nnoremap <Leader>gp :GitPush<CR>
