@@ -1,15 +1,5 @@
 set number
 set relativenumber
-set encoding=utf-8
-
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap { {}<left>
-
-set listchars=tab:\¦\-
-set list
 
 set foldmethod=indent   
 set foldnestmax=10
@@ -22,8 +12,9 @@ set shiftwidth=4
 
 set encoding=UTF-8
 
-"nnoremap <Leader>t :term bash<cr>
-"tnoremap <Esc> <C-\><C-n>:q!<CR>
+set list
+set listchars=tab:\|\-\
+
 nnoremap <Esc> :q<CR>
 
 call plug#begin()
@@ -45,6 +36,7 @@ Plug 'https://github.com/airblade/vim-gitgutter'
 Plug 'haya14busa/incsearch.vim'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/preservim/tagbar'
+Plug 'motemen/git-vim'
 
 call plug#end()
 
@@ -261,4 +253,10 @@ noremap <leader>bn :bNext<CR>
 noremap <leader>bp :bprevious<CR>
 noremap <leader>bd :bdelete<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:loaded_perl_provider = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <leader>tb :TagbarToggle<CR>
