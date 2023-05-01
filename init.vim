@@ -1,12 +1,15 @@
+"     ____  __                    _   __                 __    _       __
+"    / __ \/ /_  ____ _____ ___  / | / /___ _____  _____/ /   (_)___  / /_
+"   / /_/ / __ \/ __ `/ __ `__ \/  |/ / __ `/ __ \/ ___/ /   / / __ \/ __ \
+"  / ____/ / / / /_/ / / / / / / /|  / /_/ / /_/ / /__/ /___/ / / / / / / /
+" /_/   /_/ /_/\__,_/_/ /_/ /_/_/ |_/\__, /\____/\___/_____/_/_/ /_/_/ /_/
+"                                   /____/
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"file init.vim of Pham Ngoc Linh
+
 set number
 set relativenumber
 set encoding=utf-8
-
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap { {}<left>
 
 set listchars=tab:\¦\-
 set list
@@ -45,6 +48,9 @@ Plug 'https://github.com/airblade/vim-gitgutter'
 Plug 'haya14busa/incsearch.vim'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/preservim/tagbar'
+Plug 'motemen/git-vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'unkiwii/vim-nerdtree-sync'
 
 call plug#end()
 
@@ -73,6 +79,19 @@ nnoremap <leader>nt :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '►'
 let g:NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeShowHidden=1
+
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'✹',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -260,3 +279,8 @@ nnoremap <leader>tb :TagbarToggle<CR>
 noremap <leader>bn :bNext<CR>
 noremap <leader>bp :bprevious<CR>
 noremap <leader>bd :bdelete<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <Leader>gs :GitStatus<CR>
+nnoremap <Leader>gp :GitPush<CR>
