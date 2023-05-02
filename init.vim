@@ -25,10 +25,6 @@ set shiftwidth=4
 
 set encoding=UTF-8
 
-"nnoremap <Leader>t :term bash<cr>
-"tnoremap <Esc> <C-\><C-n>:q!<CR>
-nnoremap <Esc> :q<CR>
-
 call plug#begin()
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -76,8 +72,8 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap <leader>nt :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable = '►'
-let g:NERDTreeDirArrowCollapsible = '▼'
+let g:NERDTreeDirArrowExpandable = '[+]'
+let g:NERDTreeDirArrowCollapsible = '[-]'
 let NERDTreeShowHidden=1
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
